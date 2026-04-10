@@ -757,7 +757,7 @@ const ANIMALS = [
   { name: "Extinct Tralalero", rarity: "Secret", mps: "450K/s" },
   { name: "Agarrini la Palini", rarity: "Secret", mps: "425K/s" },
   { name: "Los Spyderinis", rarity: "Secret", mps: "425K/s" },
-  { name: "Chachechi", rarity: "Secret", mps: "400K/s" },
+  { name: "Chachech", rarity: "Secret", mps: "400K/s" },
   { name: "Blackhole Goat", rarity: "Secret", mps: "400K/s" },
   { name: "Dul Dul Dul", rarity: "Secret", mps: "375K/s" },
   { name: "Torrtuginni Dragonfrutini", rarity: "Secret", mps: "350K/s" },
