@@ -997,7 +997,7 @@ async function searchRobloxUsers(query) {
 
 async function fetchAvatarUrl(userId) {
     try {
-        const proxyUrl = `https://avatar-proxy2.vercel.app/api/avatar-proxy?userId=${userId}`;
+        const proxyUrl = `https://avatar-proxy.vercel.app/api/avatar-proxy?userId=${userId}`;
         const response = await fetch(proxyUrl);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
